@@ -1,0 +1,148 @@
+:root {
+  --Soft--blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --Cyan--transparent: hsl(178, 100%, 50%, 30%);
+
+  --Very--dark-blue-min: hsl(217, 54%, 11%);
+  --Very--dark-blue-card: hsl(216, 50%, 16%);
+  --Very--dark-blue-line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  /* positioned */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* box model */
+  min-height: 100vh;
+
+  /* typography, fonts */
+  font-size: 18px;
+  font-family: "Outfit", sans-serif;
+  /* 300, 400, 600 */
+
+  /* visual */
+  background-color: var(--Very--dark-blue-min);
+}
+
+.card {
+  /* box model */
+  width: 80%;
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 375px;
+
+  /* visual */
+  background-color: var(--Very--dark-blue-card);
+}
+
+.card__image {
+  /* box model */
+  width: 100%;
+}
+
+.card__image-container {
+  /* box model */
+  position: relative;
+  width: 100%;
+}
+
+.card__image-view {
+  display: none;
+}
+
+.card__image-container:hover .card__image-view {
+  /* positioned */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transform: translate3d(-50%, -50%, 0);
+  top: 50%;
+  left: 50%;
+
+  /* box model */
+  width: 100%;
+  height: 100%;
+
+  /* visual */
+  background-color: var(--Cyan--transparent);
+  /* misc */
+  cursor: pointer;
+}
+
+.card__title {
+  /* typography, fonts */
+  font-weight: 600;
+  /* visual */
+  color: var(--White);
+}
+
+.card__content {
+  /* visual */
+  color: var(--Soft--blue);
+}
+
+.card_info {
+  /* positioned */
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__value {
+  /* visual */
+  color: var(--Cyan);
+  /* typography, fonts */
+  font-weight: 600;
+}
+
+.card__releaseDate {
+  /* positioned */
+  display: flex;
+  gap: 10px;
+  /* visual */
+  color: var(--Soft--blue);
+}
+
+.card__line {
+  /* box model */
+  height: 1px;
+  margin: 20px auto;
+  width: 100%;
+  /* visual */
+  background-color: var(--Very--dark-blue-line);
+}
+
+.card__avatar-profile {
+  display: flex;
+  gap: 20px;
+  justify-content: start;
+}
+
+.card__avatar-profile-container {
+  width: 30px;
+  align-self: center;
+}
+
+.card__avatar-profile-image {
+  width: 100%;
+  border: 1px solid var(--White);
+  border-radius: 50%;
+}
+
+.card__creation {
+  color: var(--Soft--blue);
+  font-weight: 400;
+}
+
+.card__creation-span {
+  color: var(--White);
+  font-weight: 400;
+}
+
+.card__creation-span:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
