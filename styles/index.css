@@ -7,6 +7,10 @@
   --Very--dark-blue-card: hsl(216, 50%, 16%);
   --Very--dark-blue-line: hsl(215, 32%, 27%);
   --White: hsl(0, 0%, 100%);
+
+  /* variations */
+  --min-tranparent: hsl(216, 60%, 8%, 0.2);
+  --card-transparent: hsl(216, 50%, 16%, 0.1);
 }
 
 body {
@@ -32,6 +36,8 @@ body {
   padding: 20px;
   border-radius: 20px;
   max-width: 375px;
+  box-shadow: 0px 10px 0px 15px var(--min-tranparent),
+    0px 20px 0px 30px var(--card-transparent);
 
   /* visual */
   background-color: var(--Very--dark-blue-card);
